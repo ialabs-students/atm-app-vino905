@@ -14,14 +14,14 @@ public class AtmApp {
 		balan.put(100, 0);
 	    
 		System.out.println("Welcome to ATM");
-		System.out.println("1. Choose 1 for Deposit Money to your account");
-		System.out.println("2. Choose 2 for Withdraw Money from your account");
-		System.out.println("3. Choose 3 for Check Current Balance");
-		System.out.println("4. Choose 4 for Exit");     
+		System.out.println("1 for Deposit Money to your account");
+		System.out.println("2 for Withdraw Money from your account");
+		System.out.println("3 for Check Current Balance");
+		System.out.println("4 for Exit");     
 	
 	 Scanner sc = new Scanner(System.in); 
 	int choose;
-	System.out.println("Enter your Choice: ");
+	System.out.println("Enter your choice operation you want to perform: ");
 	choose=sc.nextInt();
 	
 	while(choose!=0) {
@@ -44,10 +44,10 @@ private static void withdraw(HashMap<Integer, Integer> balance, Scanner sc) {
 	int withdra2000=0,withdra500=0,withdra200=0,withdra100=0;
 	int currbal=currentbalance(balance);
 	int amount;
-	System.out.println("How many money you want to withdraw?");
+	System.out.println("How much amount you want to withdraw?");
 	amount = sc.nextInt();
 	if(amount>currbal || amount<=0) {
-		System.out.println("Incorrect os insufficient Balance");
+		System.out.println("Incorrect or insufficient Balance");
 	} 
 	else {
 		while(balance.get(2000)!=0 && 2000<=amount) {
